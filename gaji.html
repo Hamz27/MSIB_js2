@@ -1,0 +1,37 @@
+<script>
+    var nama = "Hamzah N";
+	var jabatan = "Menejer";
+    var status = "Lajang";
+	let gaji = 0;
+
+    switch(jabatan){
+        case "Menejer": gaji = 10000000; break;
+        case "Asisten Menejer": gaji = 8000000; break;
+        case "Staf": gaji = 5000000; break;
+        default: gaji = "";
+    };
+    
+    let tunjangan = 10/100*gaji;
+    let bpjs = 10/100*gaji;
+    
+    let tunstat;
+    if(status == "Menikah"){
+        tunstat = 10/100*gaji;
+    }
+    else{
+        tunstat = 0;
+    }
+    
+    let tot = gaji+tunjangan+bpjs+tunstat;
+    
+    document.write(
+      "Nama : "+nama+"<br>"+
+      "Jabatan : "+jabatan+"<br>"+
+      "Status : "+status+"<br>"+
+      "Gaji : "+gaji+"<br>"+
+      "Tunjangan : "+tunjangan+"<br>"+
+      "Bbpjs : "+bpjs+"<br>"+
+      "Tunjangan Status: "+tunstat+"<br>"+
+      "Total Gaji: "+tot
+    );
+</script>
